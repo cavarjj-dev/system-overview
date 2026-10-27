@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shareable map of one practice operator system. A template, not a client portal.">
+<title>Operator system</title>
+<style>
+  :root {
+    --bg: #12110f;
+    --bg-2: #1a1815;
+    --line: #2c2823;
+    --text: #f4f0e8;
+    --muted: #a79d92;
+    --faint: #6f675f;
+    --brass: #c6a36a;
+    --live: #8eae86;
+    --watch: #d2b07a;
+    --gap: #d18b7c;
+    --live-bg: #1c2820;
+    --watch-bg: #2a2418;
+    --gap-bg: #2a1c19;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.5 "Segoe UI", system-ui, sans-serif;
+    letter-spacing: 0.01em;
+  }
+  a { color: var(--brass); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--text); }
+  header, main, footer { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+  header { padding: 48px 0 12px; }
+  .kicker {
+    color: var(--brass);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; font-weight: 560; margin: 0 0 14px; letter-spacing: -0.03em; }
+  .lede { max-width: 68ch; color: var(--muted); font-size: 18px; margin: 0 0 18px; }
+  .meta { color: var(--faint); font-size: 14px; margin: 0; }
+  nav {
+    position: sticky; top: 0; z-index: 2;
+    background: rgba(18, 17, 15, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    margin-top: 28px;
+  }
+  nav ul {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex; gap: 16px; flex-wrap: wrap;
+    list-style: none;
+  }
+  nav a { color: var(--muted); font-size: 14px; text-decoration: none; }
+  nav a:hover { color: var(--text); }
+  section { padding: 36px 0 8px; }
+  h2 { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); font-weight: 600; margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+  .card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    grid-column: span 6;
+  }
+  .card.wide { grid-column: span 12; }
+  .card.third { grid-column: span 4; }
+  h3 { margin: 0 0 8px; font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+  p { margin: 0 0 8px; }
+  p:last-child, ul:last-child { margin-bottom: 0; }
+  ul { margin: 8px 0 0; padding-left: 18px; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); }
+  .faint { color: var(--faint); font-size: 14px; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 3px 8px;
+    margin: 0 0 10px;
+    border: 1px solid var(--line);
+  }
+  .pill.live { color: var(--live); background: var(--live-bg); }
+  .pill.watch { color: var(--watch); background: var(--watch-bg); }
+  .pill.gap { color: var(--gap); background: var(--gap-bg); }
+  .row { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-top: 1px solid var(--line); }
+  .row:first-of-type { border-top: 0; }
+  .row b { font-weight: 600; }
+  .row span { color: var(--muted); text-align: right; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--faint); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
+  footer { padding: 28px 0 56px; color: var(--faint); font-size: 14px; }
+  #status { min-height: 48px; }
+  @media (max-width: 800px) {
+    .card, .card.third, .card.wide { grid-column: span 12; }
+    .row { flex-direction: column; gap: 2px; }
+    .row span { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <p class="kicker">Practice operator</p>
+  <h1 id="title">Operator system</h1>
+  <p class="lede" id="lede">Loading the snapshot.</p>
+  <p class="meta" id="meta"></p>
+</header>
+<nav>
+  <ul>
+    <li><a href="#look">Needs a look</a></li>
+    <li><a href="#parent">Parent</a></li>
+    <li><a href="#profiles">Profiles</a></li>
+    <li><a href="#zones">Zones</a></li>
+    <li><a href="#models">Models</a></li>
+    <li><a href="#houses">Houses</a></li>
+    <li><a href="#rhythm">Rhythm</a></li>
+    <li><a href="#template">Template</a></li>
+  </ul>
+</nav>
+<main id="status"></main>
+<footer id="foot"></footer>
+<script>
+const DATA_VERSION = "20261026T1949";
+
+function pill(level) {
+  const label = level === "gap" ? "Gap" : level === "watch" ? "Watch" : "Live";
+  return `<span class="pill ${level}">${label}</span>`;
+}
+
+function card(level, title, body, cls) {
+  return `<article class="card ${cls || ""}">${pill(level)}<h3>${title}</h3>${body}</article>`;
+}
+
+function list(items) {
+  return `<ul>${items.map(i => `<li>${i}</li>`).join("")}</ul>`;
+}
+
+function render(data) {
+  document.title = data.title;
+  document.getElementById("title").textContent = data.title;
+  document.getElementById("lede").textContent = data.lede;
+  document.getElementById("meta").textContent = data.updated_at + " CT. " + data.snapshot;
+
+  const gaps = data.gaps.map(g => card(g.level, g.title, `<p class="muted">${g.detail}</p>`)).join("");
+  const parentRows = data.parent.facts.map(f => `<div class="row"><b>${f.label}</b><span>${f.value}</span></div>`).join("");
+  const profiles = data.profiles.map(p => card(p.level, p.name, `<p class="muted">${p.detail}</p>${p.points ? list(p.points) : ""}`, "third")).join("");
+  const zones = data.zones.map(z => card(z.level, z.name, `<p class="muted">${z.rule}</p>${list(z.points)}`)).join("");
+  const modelRows = data.models.map(m => `<tr><td>${m.work}</td><td>${m.model}</td><td>${m.leaves}</td><td>${m.note}</td></tr>`).join("");
+  const houses = data.houses.map(h => card(h.level, h.name, `<p class="muted">${h.detail}</p>`, "third")).join("");
+  const rhythm = data.rhythm.classes.map(c => `<li>${c}</li>`).join("");
+  const transfers = data.transfers.map(t => card(t.level, t.name, list(t.points))).join("");
+  const absent = list(data.not_on_this_page);
+
+  document.getElementById("status").innerHTML = `
+    <section id="look">
+      <h2>Needs a look</h2>
+      <div class="grid">${gaps}</div>
+    </section>
+    <section id="parent">
+      <h2>Parent setup</h2>
+      <div class="grid">
+        <article class="card wide">
+          ${pill(data.parent.level)}
+          <h3>${data.parent.name}</h3>
+          <p class="muted">${data.parent.detail}</p>
+          ${parentRows}
+        </article>
+      </div>
+    </section>
+    <section id="profiles">
+      <h2>Profiles and gifts</h2>
+      <div class="grid">${profiles}</div>
+    </section>
+    <section id="zones">
+      <h2>Privacy zones</h2>
+      <div class="grid">${zones}</div>
+    </section>
+    <section id="models">
+      <h2>Model decision</h2>
+      <div class="grid">
+        <article class="card wide">
+          <p class="muted">${data.model_rule}</p>
+          <table>
+            <thead><tr><th>Work</th><th>Model</th><th>Leaves the machine</th><th>Note</th></tr></thead>
+            <tbody>${modelRows}</tbody>
+          </table>
+        </article>
+      </div>
+    </section>
+    <section id="houses">
+      <h2>Where work lives</h2>
+      <div class="grid">${houses}</div>
+    </section>
+    <section id="rhythm">
+      <h2>What runs on a clock</h2>
+      <div class="grid">
+        <article class="card wide">
+          ${pill(data.rhythm.level)}
+          <h3>${data.rhythm.count_line}</h3>
+          <p class="muted">${data.rhythm.detail}</p>
+          <ul>${rhythm}</ul>
+        </article>
+      </div>
+    </section>
+    <section id="template">
+      <h2>What transfers to someone else</h2>
+      <div class="grid">${transfers}</div>
+      <div class="grid" style="margin-top:14px">
+        <article class="card wide">
+          <h3>Not on this page</h3>
+          <p class="muted">If a fact is missing, that is the fence. It is not an oversight in the snapshot.</p>
+          ${absent}
+        </article>
+      </div>
+    </section>
+  `;
+  document.getElementById("foot").textContent = data.footer;
+}
+
+fetch("overview.json?v=" + DATA_VERSION, { cache: "no-store" })
+  .then(r => {
+    if (!r.ok) throw new Error("snapshot missing");
+    return r.json();
+  })
+  .then(render)
+  .catch(() => {
+    document.getElementById("lede").textContent = "The snapshot did not load. The page is the viewer. The record is overview.json beside it.";
+  });
+</script>
+</body>
+</html>
