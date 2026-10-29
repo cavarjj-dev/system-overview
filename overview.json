@@ -1,228 +1,221 @@
 {
-  "title": "Operator system",
-  "updated": "2026-10-26",
-  "updated_at": "2026-10-26 19:52",
-  "snapshot": "Snapshot from the operator machine. Not a live feed. Nothing on a timer publishes this page.",
-  "lede": "An assistant on this computer runs practice operations. The person remains the coach. This page is the map of that setup, and a template for a build that fits someone else's work.",
+  "title": "How this assistant is set up",
+  "updated": "2026-10-29",
+  "updated_at": "2026-10-29 17:51",
+  "snapshot": "A snapshot, not a live feed. Nothing on a timer publishes this page.",
+  "lede": "What this practice has, why it is built this way, and what someone else would get. Written for a person, not for the machine.",
   "footer": "Unified Solutions. This page describes a system. It does not coach, and it does not hold client work.",
-  "parent": {
-    "level": "live",
-    "name": "Parent operator",
-    "detail": "One Hermes install on this Windows computer. It can use files, calendar, and email on this machine. Those tools are fenced. The working mouth is Slack. Desktop and the terminal are the same assistant.",
-    "facts": [
-      {
-        "label": "Software",
-        "value": "Hermes Agent v0.22.0+38.g1f6c02c (2026.9.24)"
-      },
-      {
-        "label": "Default brain",
-        "value": "grok-4.7 via xai-oauth"
-      },
-      {
-        "label": "Kind of model",
-        "value": "Closed. US vendor. Request leaves the machine."
-      },
-      {
-        "label": "Card",
-        "value": "NVIDIA RTX 3080, 10 GB"
-      },
-      {
-        "label": "Private path",
-        "value": "Llama 3.1 8B, open weights, on this machine"
-      },
-      {
-        "label": "Public writing",
-        "value": "Draft on Claude Sonnet. Critique on a Chinese cloud model only by hand, and only for text already public."
-      },
-      {
-        "label": "Housekeeping",
-        "value": "Titles, compression, and page reading run locally"
-      },
-      {
-        "label": "Speech",
-        "value": "In stays here. A spoken reply sends those words to a speech service."
-      },
-      {
-        "label": "Search",
-        "value": "The question goes to the US vendor. Reading a public page starts here."
-      }
-    ]
-  },
-  "profiles": [
+  "have_intro": "Four choices hold the design. Each one is here because the other way leaks something.",
+  "tiles": [
     {
-      "level": "live",
-      "name": "Parent",
-      "detail": "The practice operator. Its own files, its own rules, its own mouth.",
+      "title": "You talk",
+      "text": "The assistant meets you where you already talk. You still decide."
+    },
+    {
+      "title": "It remembers",
+      "text": "How you work stays on this computer. It does not copy every sentence."
+    },
+    {
+      "title": "Minds stay separate",
+      "text": "A gift is another mind. It is not a second login on this one."
+    },
+    {
+      "title": "Private stays here",
+      "text": "Session talk and client files do not go to a cloud model."
+    }
+  ],
+  "skills_intro": "These are the kinds of work, not the internal names of the tools. A person should not have to learn the machine to see the fence.",
+  "can": [
+    "Talk with you, and answer in speech.",
+    "Draft an email, a post, a page, a deck, or a sheet. You send it.",
+    "Look at the calendar and help find a time.",
+    "Read a file you name. The read stays on this machine.",
+    "Look up public information.",
+    "Remember how you like the work done, on purpose, on this computer.",
+    "Keep the backup, the morning look, and the weekly review you already asked for.",
+    "Tell you when something you already run is stuck."
+  ],
+  "cannot": [
+    "Send the email, post the page, or pay a bill on its own.",
+    "Sit in a coaching session, or replace your judgment.",
+    "Open a client file because it appeared on a calendar.",
+    "Store a client name, a session note, or a document in the memory that stays on this computer.",
+    "Share this mind, these keys, or these files with someone else.",
+    "Promise that a cloud company keeps nothing. That has not been confirmed.",
+    "Use a model hosted in China for names, scheduling, or private talk."
+  ],
+  "setup_intro": "One mind for this practice. A second profile on the same install is the pattern not to copy. A gift is a separate login.",
+  "setup": [
+    {
+      "title": "This practice",
+      "why": "One install, one set of rules, one mouth. You talk to it in Slack. The desktop is the same assistant.",
       "points": [
-        "Does not attend sessions.",
-        "Does not replace judgment.",
-        "Client documents stay closed until a file is named, and then the read stays on this machine."
+        "It can use files, calendar, and email on this machine. Those tools are fenced.",
+        "It does not attend sessions.",
+        "A client document stays closed until you name the file."
       ]
     },
     {
-      "level": "watch",
-      "name": "Second profile, same install",
-      "detail": "A second profile lives under the parent install. It uses the same model login. It is not an isolated gift. Do not copy this pattern for another person.",
+      "title": "Do not copy this",
+      "why": "A second profile on this same install shares the computer user and the model login. That is not a gift.",
       "points": [
         "Same computer user.",
         "Same model login.",
-        "Same backup drift as the parent."
+        "Do not hand this pattern to another person."
       ]
     },
     {
-      "level": "live",
-      "name": "Isolated gift",
-      "detail": "One gifted operator has a separate Windows login, a separate Hermes home, and separate keys. Last metal probe: green, gateway up (2026-10-26 15:55 CT).",
+      "title": "A gifted mind",
+      "why": "Separate login, separate home, separate keys. Same computer today. Not the same mind.",
       "points": [
-        "Separate login on this computer, not a separate computer.",
-        "Disk is shared. The graphics card is not shared, by rule.",
-        "Parent keys, parent files, and parent conversations are not shared.",
-        "Their files sit on their own share. This snapshot did not open it.",
+        "Last check: up.",
+        "The graphics card is not shared.",
         "Their name, talk, and keys are not on this page."
       ]
     }
   ],
-  "zones": [
+  "folders_intro": "Work is sorted by the kind of work, not by a business name. The assistant's own files sit apart from the practice.",
+  "folders": [
     {
-      "level": "live",
-      "name": "Green",
-      "rule": "Practice business. No session content. No unnecessary client names. A cloud model is allowed.",
-      "points": [
-        "Strategy, public writing, research on public material.",
-        "Prefer a role over a name when the name adds nothing."
-      ]
+      "title": "Practice work",
+      "why": "One folder. Strategy, operations, finance, communications, research, data. Not one folder per venture."
     },
     {
-      "level": "watch",
-      "name": "Yellow",
-      "rule": "Names, companies, and scheduling. Minimum only. A US cloud model may handle the admin task. It does not analyze the person.",
-      "points": [
-        "A Chinese host does not get this.",
-        "Codes over full names when the work still gets done."
-      ]
+      "title": "The assistant",
+      "why": "Settings, memory, sessions, and keys live apart from the business files. They are not filed with the work."
     },
     {
-      "level": "gap",
-      "name": "Red",
-      "rule": "What was said in session. Assessments. Health, family, or legal material. Recordings. Client documents with the person's substance.",
-      "points": [
-        "Local model, or the person. Not a cloud model.",
-        "Seeing a file is not permission to open it.",
-        "If a named file is unlocked, the read stays on this machine.",
-        "The rule is enforced by the operator. It is not a sealed vault."
-      ]
+      "title": "A gifted person's files",
+      "why": "Their own folder. This snapshot did not open it. Side notes have leaked into the practice folders. Do not describe that as a second house."
+    },
+    {
+      "title": "The public site",
+      "why": "Its own place. Shipped apart from drafts. This page is not the practice site."
     }
   ],
-  "model_rule": "Closed means the company keeps the model and the text goes out. Open-weight means the model can run here and the text can stay. Where the text goes, and who trained it, are different tests. A router is not a fence.",
-  "models": [
+  "security_intro": "The fence is a rule the operator keeps. It is not a locked room that makes a mistake impossible.",
+  "security": [
     {
-      "work": "Operations, research, tools",
-      "model": "Grok 4.7, xAI, US, closed",
-      "leaves": "Yes",
-      "note": "Default."
+      "title": "Separate minds",
+      "why": "A gift does not get this login, these keys, or these files. A steward can see whether it is up. Not what was said."
     },
     {
-      "work": "Public writing draft",
-      "model": "Claude Sonnet, Anthropic, US, closed",
-      "leaves": "Yes",
-      "note": "Posts, site, decks, anything a stranger will read."
+      "title": "Words leave on purpose",
+      "why": "Ordinary work can go to a US cloud model. Private talk and client files stay on this computer, on a small local model."
     },
     {
-      "work": "Public-writing critique",
-      "model": "GLM cloud, Chinese host, closed",
-      "leaves": "Yes",
-      "note": "By hand. Green text only. It scores. It does not rewrite the voice."
+      "title": "A named file is not a standing key",
+      "why": "Seeing a file is not permission to open it. If you name one, the read stays here. The next file is still closed."
     },
     {
-      "work": "Names and scheduling",
-      "model": "Grok, or local Llama",
-      "leaves": "Only if Grok",
-      "note": "Never the Chinese cloud model."
+      "title": "Memory is local and on purpose",
+      "why": "It remembers how the work is done. It does not vacuum every sentence. It does not hold client names. The online search for that memory is off."
     },
     {
-      "work": "Session content and client files",
-      "model": "Llama 3.1 8B, Meta, US, open weights",
-      "leaves": "No",
-      "note": "Private path. Not the most capable path."
+      "title": "This page is a fence too",
+      "why": "Names, keys, and other people's talk are not published here. If a fact is missing, that is the point."
     },
     {
-      "work": "If the default brain is down",
-      "model": "Claude, then local Llama",
-      "leaves": "Claude yes, Llama no",
-      "note": "Written rule. See the gap above the fold."
-    },
-    {
-      "work": "Deliberate comparison",
-      "model": "A US router, on purpose",
-      "leaves": "Yes, to whatever model was picked",
-      "note": "Not a backup. Not for private material."
+      "title": "A model in China is not a backup",
+      "why": "It is used by hand, and only on text that is already public. It does not get names or private talk."
     }
   ],
-  "houses": [
-    {
-      "level": "live",
-      "name": "Practice files",
-      "detail": "One command folder. Sorted by kind of work: strategy, operations, finance, communications, research, data. Not by venture."
-    },
-    {
-      "level": "live",
-      "name": "Assistant runtime",
-      "detail": "Separate install. Settings, memory, sessions, and keys stay there. They are not filed with the business."
-    },
-    {
-      "level": "live",
-      "name": "Identity",
-      "detail": "The operator's own assessments. Drop, file, extract, synthesize. Not client files. Not opened unless he says so."
-    },
-    {
-      "level": "live",
-      "name": "Public site",
-      "detail": "Its own repository. Shipped apart from drafts."
-    },
-    {
-      "level": "watch",
-      "name": "Projects and archive",
-      "detail": "The design said one folder per effort, then archive when done. Projects is not how the work is filed. Archive is empty."
-    },
-    {
-      "level": "watch",
-      "name": "Side efforts",
-      "detail": "A personal note and a gifted-setup note sit inside the practice folders. That is a leak, not a second house."
-    }
-  ],
-  "rhythm": {
-    "level": "live",
-    "count_line": "30 scheduled jobs. 27 on. 3 paused.",
-    "detail": "Job prompts are not published. A name in a job is not a name on this page.",
-    "classes": [
-      "Morning operations and a weekday research briefing.",
-      "Weekly strategy, finance, cost, and a Friday review.",
-      "Gateway health, and a nightly backup.",
-      "A metal check on the isolated gift. Up or down. Not their talk.",
-      "A daily cost pulse is paused on purpose. The weekly cost job remains."
+  "gift": {
+    "intro": "You do not learn a terminal. You talk. Someone else keeps the computer on. You keep the decisions.",
+    "required": [
+      {
+        "title": "You talk, and you name it",
+        "text": "Day one is a conversation. You decide what to call it. You do not inherit this personality."
+      },
+      {
+        "title": "A phone you already text from",
+        "text": "You text first. Until you do, it cannot start the conversation."
+      },
+      {
+        "title": "A folder for your files",
+        "text": "Your files are not this practice's files. Drop what you want it to know. It does not browse the rest."
+      },
+      {
+        "title": "Someone keeps the computer on",
+        "text": "They pay for the model and can see whether it is up. They do not read the talk. You do not use their login."
+      },
+      {
+        "title": "You decide what can leave",
+        "text": "Public work can go out. Private talk stays. You do not edit a settings file to say so."
+      }
+    ],
+    "easy": [
+      "You ask in ordinary language.",
+      "Drafts come back to you. You send them.",
+      "You do not open this computer, this Slack, or a settings screen.",
+      "If it is down, the person who runs it can see that. They cannot read what you said."
+    ],
+    "not": [
+      "This login, these keys, this graphics card, or these practice files.",
+      "This personality.",
+      "A shared chatbot account.",
+      "A second profile on this install. That is the pattern to avoid."
     ]
   },
-  "transfers": [
+  "operator": {
+    "intro": "The detail sits here so the person who runs it can check the snapshot. A guest does not need it to understand the brief.",
+    "facts": [
+      {
+        "label": "Software",
+        "value": "Hermes Agent v0.22.5 (2026.9.24)"
+      },
+      {
+        "label": "Everyday brain",
+        "value": "grok-4.7 via xai-oauth. Ordinary work leaves the machine."
+      },
+      {
+        "label": "Private path",
+        "value": "A small open model on this computer. Private text stays here. It is not the most capable path."
+      },
+      {
+        "label": "Speech",
+        "value": "What you say is transcribed here. A spoken reply sends those words to a speech service."
+      },
+      {
+        "label": "Search",
+        "value": "A question can go to the US vendor. Reading a public page starts here."
+      },
+      {
+        "label": "Gifted mind",
+        "value": "Separate login. Last check: up."
+      },
+      {
+        "label": "Scheduled work",
+        "value": "32 running, 3 paused, 35 in all. Job names are not on this page."
+      }
+    ],
+    "notes": [
+      "The morning look, the weekly review, and the nightly backup keep running. A daily cost note is paused on purpose.",
+      "The private path fits a 10 GB card. It keeps text home. It is not a frontier model.",
+      "Session history on this install is large. Compacting it waits until the gateway is stopped. It is not done.",
+      "A software update is waiting. It was not applied for this snapshot."
+    ]
+  },
+  "limits": [
     {
-      "level": "live",
-      "name": "They get",
-      "points": [
-        "Their own install, their own keys, their own files.",
-        "A mouth they already use.",
-        "A zone rule matched to their work, not copied from a coaching code unless they are a coach.",
-        "A default closed model for the work, and a local model for what must not leave.",
-        "A steward who can see up or down, not their conversations."
-      ]
+      "title": "The backup path matches the written rule",
+      "detail": "At this snapshot, the extra stop was not on the parent chain. Ordinary failure goes to a US model, then to the small model on this computer."
     },
     {
-      "level": "gap",
-      "name": "They do not get",
-      "points": [
-        "This login, these keys, this graphics card, or these practice files.",
-        "This personality.",
-        "A shared chatbot account.",
-        "A second profile on this install. That pattern is the one to avoid."
-      ]
+      "title": "Do not claim the vendor keeps nothing",
+      "detail": "By rule, session content does not go to a cloud model. Zero-retention on the cloud account has not been confirmed. The rule is not a vendor promise."
+    },
+    {
+      "title": "Privacy is a rule, not a sealed room",
+      "detail": "There is no locked profile that makes a cloud call impossible. Disk encryption is still an open item. Say that before calling the machine a vault."
+    },
+    {
+      "title": "Folders do not separate the ventures",
+      "detail": "The house sorts by kind of work. Side efforts have leaked into those folders. Do not describe this as one folder per business."
+    },
+    {
+      "title": "The gift shares the computer, not the keys",
+      "detail": "Isolation here is a separate login, a separate home, and separate keys. It is not a separate machine. The original bar was a separate host. Last check: up."
     }
   ],
   "not_on_this_page": [
@@ -232,50 +225,8 @@
     "The private cockpit used day to day.",
     "Prices, pipeline, and household numbers."
   ],
-  "gaps": [
-    {
-      "level": "gap",
-      "title": "Do not claim the backup chain is clean",
-      "detail": "The written rule is US Claude, then a local model. The live chain has an extra entry after Claude. It is labeled like a router and names a foreign model that is not installed as the local private path. The second profile on this install has the same entry. A mid-turn failover can send the whole conversation. Remove it or prove it dead before telling anyone the backup cannot leave the fence."
-    },
-    {
-      "level": "gap",
-      "title": "Do not claim the vendor keeps nothing",
-      "detail": "Session content is not sent to a cloud model, by rule. Zero-retention on the cloud account has not been confirmed. The rule is not a vendor promise."
-    },
-    {
-      "level": "gap",
-      "title": "Privacy is a rule, not a sealed room",
-      "detail": "There is no separate locked profile that makes a cloud call impossible. Disk encryption is still an open item on the checklist. Say that before calling the machine a vault."
-    },
-    {
-      "level": "watch",
-      "title": "Folders do not separate the ventures",
-      "detail": "The house sorts by kind of work. Side efforts have leaked into those folders. Archive is empty. Do not describe this as one folder per business."
-    },
-    {
-      "level": "watch",
-      "title": "The private path is small on purpose",
-      "detail": "Llama 3.1 8B fits the 10 GB card. It keeps text home. It is not a frontier model. A local answer without tools is continuity, not the operator."
-    },
-    {
-      "level": "watch",
-      "title": "The gift shares the computer, not the keys",
-      "detail": "Isolation here is a separate login, a separate home, and separate keys. It is not a separate machine. The original bar was a separate host. This snapshot is the login pattern, and the gateway was up."
-    },
-    {
-      "level": "watch",
-      "title": "Session history is large",
-      "detail": "The parent session store is over a gigabyte. Compacting it is an offline job, with the gateway stopped. It is not urgent, and it is not done."
-    },
-    {
-      "level": "watch",
-      "title": "A software update is waiting",
-      "detail": "The parent install reports an update. It was not applied for this snapshot. Do not treat the version line as the latest release."
-    }
-  ],
   "probe": {
-    "fallback_extra_entries": 1,
+    "fallback_extra_entries": 0,
     "gift_metal": "green",
     "gift_gateway": "up"
   }
