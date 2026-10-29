@@ -1,188 +1,188 @@
 {
-  "title": "How this assistant is set up",
+  "title": "Your own assistant",
   "updated": "2026-10-29",
-  "updated_at": "2026-10-29 18:21",
-  "snapshot": "A snapshot, not a live feed. Nothing on a timer publishes this page.",
-  "lede": "What this practice has, why it is built this way, and what someone else would get. Written for a person, not for the machine.",
-  "footer": "Unified Solutions. This page describes a system. It does not coach, and it does not hold client work.",
-  "have_intro": "Four choices hold the design. Each one is here because the other way leaks something.",
+  "updated_at": "2026-10-29 18:27",
+  "snapshot": "A snapshot, not a live feed. This page does not update itself.",
+  "lede": "A plain look at a setup you could have. Your account. Your files. You can stop.",
+  "footer": "Unified Solutions. This page explains a setup. It does not coach, and it does not hold client work.",
+  "have_intro": "Four things you would actually feel. The rest is how we keep them true.",
   "tiles": [
     {
-      "title": "You talk",
-      "text": "The assistant meets you where you already talk. You still decide."
+      "title": "Your account",
+      "text": "Your own sign-in. Not shared. You can stop anytime."
     },
     {
-      "title": "It remembers",
-      "text": "How you work stays on this computer. It does not copy every sentence."
+      "title": "Your files",
+      "text": "One folder for this assistant. A regular drawer, and a private drawer for sensitive files."
     },
     {
-      "title": "Minds stay separate",
-      "text": "A gift is another mind. It is not a second login on this one."
+      "title": "The models",
+      "text": "A set amount each month, or a stronger model when the work needs it. Open can stay on the computer. Closed means a company runs it, and those words leave."
     },
     {
-      "title": "Private stays here",
-      "text": "Session talk and client files do not go to a cloud model."
+      "title": "The work",
+      "text": "Reports, invoices, draft emails, a watch on what you name. A business, or a personal life. You pick."
     }
   ],
-  "skills_intro": "These are the kinds of work, not the internal names of the tools. A person should not have to learn the machine to see the fence.",
+  "skills_intro": "A plain list. No tool names.",
   "can": [
-    "Talk with you, and answer in speech.",
-    "Draft an email, a post, a page, a deck, or a sheet. You send it.",
-    "Look at the calendar and help find a time.",
-    "Read a file you name. The read stays on this machine.",
+    "Talk with you, and answer out loud.",
+    "Draft an email, a report, an invoice, or a page. You send it.",
+    "Watch the things you ask it to watch, and tell you when one is stuck.",
+    "Connect to email, a calendar, a spreadsheet, or Google Drive, if you say so.",
+    "Read a file you name. The read stays on the computer.",
     "Look up public information.",
-    "Remember how you like the work done, on purpose, on this computer.",
-    "Keep the backup, the morning look, and the weekly review you already asked for.",
-    "Tell you when something you already run is stuck."
+    "Learn how you like the work done, if you want it to. It does not quietly keep every sentence.",
+    "Stop when you say stop."
   ],
   "cannot": [
-    "Send the email, post the page, or pay a bill on its own.",
+    "Send the email, post the page, or pay a bill unless you have said that kind of step is allowed.",
     "Sit in a coaching session, or replace your judgment.",
-    "Open a client file because it appeared on a calendar.",
-    "Store a client name, a session note, or a document in the memory that stays on this computer.",
-    "Share this mind, these keys, or these files with someone else.",
-    "Promise that a cloud company keeps nothing. That has not been confirmed.",
+    "Open a sensitive file because it showed up nearby.",
+    "Quietly save every sentence, or keep a client name in memory.",
+    "Share your account, your files, or your keys.",
+    "Promise a company keeps nothing. That has not been confirmed.",
     "Use a model hosted in China for names, scheduling, or private talk."
   ],
-  "setup_intro": "One mind for this practice. A second profile on the same install is the pattern not to copy. A gift is a separate login.",
+  "setup_intro": "This is the shape. Your account is not someone else's login.",
   "setup": [
     {
-      "title": "This practice",
-      "why": "One install, one set of rules, one mouth. You talk to it in Slack. The desktop is the same assistant.",
+      "title": "Your account",
+      "why": "You own the sign-in. You can stop, or not use it, anytime.",
       "points": [
-        "It can use files, calendar, and email on this machine. Those tools are fenced.",
-        "It does not attend sessions.",
-        "A client document stays closed until you name the file."
+        "Not shared.",
+        "Not a second login on someone else's account.",
+        "Turning it off is your call."
       ]
     },
     {
-      "title": "Do not copy this",
-      "why": "A second profile on this same install shares the computer user and the model login. That is not a gift.",
+      "title": "Your folder",
+      "why": "One place, just for this assistant.",
       "points": [
-        "Same computer user.",
-        "Same model login.",
-        "Do not hand this pattern to another person."
+        "A regular drawer for everyday files.",
+        "A private drawer for anything sensitive.",
+        "You know where the finished work lands."
       ]
     },
     {
-      "title": "A gifted mind",
-      "why": "Separate login, separate home, separate keys. Same computer today. Not the same mind.",
+      "title": "The models",
+      "why": "We pick the model for the work. You do not have to know the names.",
       "points": [
-        "Last check: up.",
-        "The graphics card is not shared.",
-        "Their name, talk, and keys are not on this page."
+        "You can start with a set amount each month.",
+        "Open means it can run on the computer, so private words can stay here.",
+        "Closed means a company runs it, and those words leave the machine."
       ]
     }
   ],
-  "folders_intro": "Work is sorted by the kind of work, not by a business name. The assistant's own files sit apart from the practice.",
+  "folders_intro": "You should be able to point at the folder and know what belongs there.",
   "folders": [
     {
-      "title": "Practice work",
-      "why": "One folder. Strategy, operations, finance, communications, research, data. Not one folder per venture."
+      "title": "Everyday files",
+      "why": "Reports, drafts, and the work you asked for. This is where finished work lands."
     },
     {
-      "title": "The assistant",
-      "why": "Settings, memory, sessions, and keys live apart from the business files. They are not filed with the work."
+      "title": "The private drawer",
+      "why": "Anything sensitive, or anything that needs care. It does not mix with the everyday files. The assistant can help you sort what goes here. It does not open a file because it is nearby."
     },
     {
-      "title": "A gifted person's files",
-      "why": "Their own folder. This snapshot did not open it. Side notes have leaked into the practice folders. Do not describe that as a second house."
+      "title": "What it remembers",
+      "why": "How you like the work done, if you ask it to remember. Not every sentence. Not a client name."
     },
     {
-      "title": "The public site",
-      "why": "Its own place. Shipped apart from drafts. This page is not the practice site."
+      "title": "What it can connect",
+      "why": "Email, a calendar, a spreadsheet, Google Drive. Only the ones you choose. The rest stay off."
     }
   ],
-  "security_intro": "The fence is a rule the operator keeps. It is not a locked room that makes a mistake impossible.",
+  "security_intro": "Private, in plain words. A rule we keep. Not a locked room.",
   "security": [
     {
-      "title": "Separate minds",
-      "why": "A gift does not get this login, these keys, or these files. A steward can see whether it is up. Not what was said."
+      "title": "Your files stay in your folder",
+      "why": "Sensitive files stay in the private drawer. A read you name stays on the computer."
     },
     {
-      "title": "Words leave on purpose",
-      "why": "Ordinary work can go to a US cloud model. Private talk and client files stay on this computer, on a small local model."
+      "title": "Some words leave, on purpose",
+      "why": "Ordinary questions can go to a company model. A spoken reply uses a speech service. A web question can go to a US company. We say that before we connect it."
     },
     {
-      "title": "A named file is not a standing key",
-      "why": "Seeing a file is not permission to open it. If you name one, the read stays here. The next file is still closed."
+      "title": "It does not read what you did not hand it",
+      "why": "Seeing a file is not permission to open it. The next file stays closed until you name it."
     },
     {
-      "title": "Memory is local and on purpose",
-      "why": "It remembers how the work is done. It does not vacuum every sentence. It does not hold client names. The online search for that memory is off."
+      "title": "You can stop",
+      "why": "Anytime. The account stays yours. Stopping is not a favor you have to ask for."
     },
     {
-      "title": "This page is a fence too",
-      "why": "Names, keys, and other people's talk are not published here. If a fact is missing, that is the point."
+      "title": "A company has not promised to keep nothing",
+      "why": "We do not tell you they keep nothing. That has not been confirmed."
     },
     {
-      "title": "A model in China is not a backup",
-      "why": "It is used by hand, and only on text that is already public. It does not get names or private talk."
+      "title": "A model in China is not the backup",
+      "why": "Used by hand, and only on text that is already public. It does not get names or private talk."
     }
   ],
   "gift": {
-    "intro": "You do not learn a terminal. You talk. Someone else keeps the computer on. You keep the decisions.",
+    "intro": "Same shape. Your own account. Your own files. You talk. You can stop. If a piece of this looks useful, say which piece. You do not have to take all of it.",
     "required": [
       {
-        "title": "You talk, and you name it",
-        "text": "Day one is a conversation. You decide what to call it. You do not inherit this personality."
+        "title": "Your own sign-in",
+        "text": "Not shared. You can stop anytime."
       },
       {
-        "title": "A phone you already text from",
-        "text": "You text first. Until you do, it cannot start the conversation."
+        "title": "A folder with a private drawer",
+        "text": "Everyday files in one place. Sensitive files in another. You know where things land."
       },
       {
-        "title": "A folder for your files",
-        "text": "Your files are not this practice's files. Drop what you want it to know. It does not browse the rest."
+        "title": "Models picked for the work",
+        "text": "A set amount each month, or a stronger model when you need it. Open can stay on the computer. Closed means a company runs it, and those words leave."
       },
       {
-        "title": "Someone keeps the computer on",
-        "text": "They pay for the model and can see whether it is up. They do not read the talk. You do not use their login."
+        "title": "Connect only what you want",
+        "text": "Email, a calendar, a spreadsheet, Google Drive. The rest stay off."
       },
       {
-        "title": "You decide what can leave",
-        "text": "Public work can go out. Private talk stays. You do not edit a settings file to say so."
+        "title": "It learns how you work, if you want that",
+        "text": "You show it. You decide what it keeps. It does not quietly save every sentence."
       }
     ],
     "easy": [
-      "You ask in ordinary language.",
-      "Drafts come back to you. You send them.",
-      "You do not open this computer, this Slack, or a settings screen.",
-      "If it is down, the person who runs it can see that. They cannot read what you said."
+      "You ask in ordinary words.",
+      "It drafts. You send.",
+      "You do not learn a setup screen.",
+      "You can stop, or not use it, anytime."
     ],
     "not": [
-      "This login, these keys, this graphics card, or these practice files.",
-      "This personality.",
-      "A shared chatbot account.",
-      "A second profile on this install. That is the pattern to avoid."
+      "Someone else's login, keys, or files.",
+      "A promise that a company keeps nothing.",
+      "A locked room that makes a mistake impossible.",
+      "The whole thing on day one. You can take the piece that is useful."
     ]
   },
   "operator": {
-    "intro": "The detail sits here so the person who runs it can check the snapshot. A guest does not need it to understand the brief.",
+    "intro": "The nuts and bolts. You do not need this to understand the page.",
     "facts": [
       {
         "label": "Software",
         "value": "Hermes Agent v0.22.5 (2026.9.24)"
       },
       {
-        "label": "Everyday brain",
-        "value": "grok-4.7 via xai-oauth. Ordinary work leaves the machine."
+        "label": "Everyday model",
+        "value": "grok-4.7. A company runs it. Ordinary work leaves this computer."
       },
       {
-        "label": "Private path",
-        "value": "A small open model on this computer. Private text stays here. It is not the most capable path."
+        "label": "Private model",
+        "value": "A smaller model on this computer. Private text stays here. It is not the strongest model."
       },
       {
         "label": "Speech",
-        "value": "What you say is transcribed here. A spoken reply sends those words to a speech service."
+        "value": "What you say is turned into text on this computer. A spoken reply sends those words to a speech service."
       },
       {
         "label": "Search",
-        "value": "A question can go to the US vendor. Reading a public page starts here."
+        "value": "A question can go to a US company. Reading a public page starts here."
       },
       {
-        "label": "Gifted mind",
-        "value": "Separate login. Last check: up."
+        "label": "Someone else's assistant",
+        "value": "A separate sign-in. Last check: up."
       },
       {
         "label": "Scheduled work",
@@ -190,9 +190,9 @@
       }
     ],
     "notes": [
-      "The morning look, the weekly review, and the nightly backup keep running. A daily cost note is paused on purpose.",
-      "The private path fits a 10 GB card. It keeps text home. It is not a frontier model.",
-      "Session history on this install is large. Compacting it waits until the gateway is stopped. It is not done.",
+      "The morning look, the weekly review, and the nightly backup are still running. A daily cost note is paused on purpose.",
+      "The private model fits the card in this computer. It keeps text here. It is not the strongest model.",
+      "Old conversations on this computer take a lot of space. Cleaning that up waits until the assistant is stopped. It is not done.",
       "A software update is waiting. It was not applied for this snapshot."
     ]
   },
@@ -202,20 +202,20 @@
       "detail": "At this snapshot, the extra stop was not on the parent chain. Ordinary failure goes to a US model, then to the small model on this computer."
     },
     {
-      "title": "Do not claim the vendor keeps nothing",
-      "detail": "By rule, session content does not go to a cloud model. Zero-retention on the cloud account has not been confirmed. The rule is not a vendor promise."
+      "title": "Do not say a company keeps nothing",
+      "detail": "By rule, private talk does not go to a company model. The company has not promised to keep nothing. The rule is ours. It is not their promise."
     },
     {
-      "title": "Privacy is a rule, not a sealed room",
-      "detail": "There is no locked profile that makes a cloud call impossible. Disk encryption is still an open item. Say that before calling the machine a vault."
+      "title": "Privacy is a rule we keep",
+      "detail": "It is not a locked room. A mistake is still possible. Disk encryption is still an open item."
     },
     {
-      "title": "Folders do not separate the ventures",
-      "detail": "The house sorts by kind of work. Side efforts have leaked into those folders. Do not describe this as one folder per business."
+      "title": "Folders are sorted by kind of work",
+      "detail": "Not one folder per business. Side work has landed in the practice folders. Do not describe it as a separate house for each venture."
     },
     {
-      "title": "The gift shares the computer, not the keys",
-      "detail": "Isolation here is a separate login, a separate home, and separate keys. It is not a separate machine. The original bar was a separate host. Last check: up."
+      "title": "A hosted assistant shares the computer, not the keys",
+      "detail": "Separate sign-in, separate files, separate keys. Not a separate machine. Last check: up."
     }
   ],
   "not_on_this_page": [
