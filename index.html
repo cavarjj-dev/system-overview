@@ -106,66 +106,51 @@
     letter-spacing: -0.02em;
     line-height: 1.15;
   }
-  .picture {
-    background: var(--paper);
+  .scene {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 28px;
+    align-items: start;
+    background:
+      radial-gradient(circle at 12% 18%, #e7f0eb 0, transparent 42%),
+      var(--paper);
     border: 1px solid var(--line);
     border-radius: 22px;
-    padding: 28px 22px 22px;
+    padding: 28px 24px 22px;
   }
-  .hub { display: flex; flex-direction: column; align-items: center; }
-  .box {
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 14px 16px;
-    text-align: center;
-    width: min(280px, 100%);
-  }
-  .box strong { display: block; margin-bottom: 4px; }
-  .box span, .arm span { color: var(--muted); font-size: 15px; }
-  .stem { width: 2px; height: 28px; background: var(--green); }
-  .arms {
+  .you { text-align: center; }
+  .you svg { width: min(180px, 100%); height: auto; display: block; margin: 0 auto 14px; }
+  .you p { margin: 0; color: var(--muted); font-size: 15px; }
+  .you strong { display: block; color: var(--ink); font-size: 17px; margin-bottom: 4px; }
+  .cabinet svg { width: 100%; height: auto; display: block; }
+  .shelf {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 42px 1fr;
     gap: 12px;
-    width: 100%;
-    margin-top: 0;
-  }
-  .arm { display: flex; flex-direction: column; align-items: center; }
-  .arm .stem { height: 22px; }
-  .bar {
-    width: min(640px, 72%);
-    height: 2px;
-    background: var(--green);
-  }
-  .split { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: stretch; margin-top: 22px; }
-  .side {
+    align-items: start;
+    background: rgba(255, 252, 248, 0.86);
+    border: 1px solid var(--line);
     border-radius: 16px;
-    padding: 16px 16px 8px;
+    padding: 14px 16px;
   }
-  .side.shared { background: var(--clay-soft); }
-  .side.ours { background: var(--green-soft); }
-  .side p { margin: 0 0 8px; }
-  .tag { font-size: 13px; font-weight: 650; letter-spacing: 0.02em; text-transform: uppercase; }
-  .versus {
-    align-self: center;
-    color: var(--faint);
-    font-size: 13px;
-    font-weight: 650;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+  .mark {
+    width: 42px; height: 42px; border-radius: 12px;
+    background: var(--green); color: #fff;
+    display: grid; place-items: center;
+    font-family: Georgia, Palatino, serif; font-size: 20px;
   }
+  .shelf h3 { margin: 0 0 4px; font-size: 18px; }
+  .shelf p { margin: 0; color: var(--muted); }
+  .quiet-line { margin: 14px 0 0; color: var(--muted); font-size: 15px; }
   @media (max-width: 800px) {
-    .tiles, .grid, .grid.three, .arms, .split { grid-template-columns: 1fr; }
-    .versus { writing-mode: horizontal-tb; transform: none; text-align: center; }
-    .bar { display: none; }
+    .tiles, .grid, .grid.three, .scene { grid-template-columns: 1fr; }
     .facts div { grid-template-columns: 1fr; gap: 4px; }
   }
 </style>
 </head>
 <body>
 <header>
-  <p class="kicker">A brief, not a control panel</p>
+  <p class="kicker">Plain words</p>
   <h1 id="title">How this assistant is set up</h1>
   <p class="lede" id="lede">Loading.</p>
   <div class="jumps">
@@ -182,13 +167,13 @@
     <li><a href="#setup">Setup</a></li>
     <li><a href="#private">Privacy</a></li>
     <li><a href="#gift">Getting one</a></li>
-    <li><a href="#run">For the operator</a></li>
+    <li><a href="#run">The details</a></li>
   </ul>
 </nav>
 <main id="main"></main>
 <footer id="foot"></footer>
 <script>
-const DATA_VERSION = "20261029T1809";
+const DATA_VERSION = "20261029T1821";
 
 function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({
@@ -226,52 +211,70 @@ function render(data) {
   ).join("");
   document.getElementById("main").innerHTML = `
     <section id="picture">
-      <h2>How it works</h2>
-      <p class="claim">A mind that is not shared.</p>
-      <p class="intro">You talk. The assistant sits on a computer. What happens next depends on the kind of work. A second person does not join your mind. They get their own.</p>
-      <div class="picture">
-        <div class="hub">
-          <div class="box"><strong>You talk</strong><span>Where you already talk. You do not learn a terminal.</span></div>
-          <div class="stem"></div>
-          <div class="box"><strong>Your assistant</strong><span>On a computer. Your files. Your memory. Not a shared login.</span></div>
-          <div class="stem"></div>
-          <div class="bar"></div>
+      <h2>How it fits together</h2>
+      <p class="claim">You talk. Someone else carries the setup.</p>
+      <p class="intro">You already have a phone and a computer. That is enough. Behind that is a desk built for your work. The tools can change. The desk stays.</p>
+      <div class="scene">
+        <div class="you">
+          <svg viewBox="0 0 200 250" aria-hidden="true">
+            <rect x="118" y="8" width="46" height="86" rx="10" fill="#fffcf8" stroke="#1e4d3a" stroke-width="2.5"/>
+            <rect x="126" y="20" width="30" height="52" rx="4" fill="#e7f0eb"/>
+            <circle cx="141" cy="82" r="3" fill="#1e4d3a"/>
+            <rect x="24" y="108" width="152" height="96" rx="10" fill="#fffcf8" stroke="#1c1916" stroke-width="2.5"/>
+            <rect x="36" y="120" width="128" height="68" rx="6" fill="#e7f0eb"/>
+            <rect x="12" y="206" width="176" height="12" rx="6" fill="#1c1916"/>
+            <circle cx="100" cy="154" r="10" fill="#1e4d3a"/>
+          </svg>
+          <p><strong>You, today</strong>Your phone. Your computer. You talk. You do not learn a setup screen.</p>
         </div>
-        <div class="arms">
-          <div class="arm">
-            <div class="stem"></div>
-            <div class="box"><strong>Stays here</strong><span>A file you name. Private talk. It does not go out.</span></div>
-          </div>
-          <div class="arm">
-            <div class="stem"></div>
-            <div class="box"><strong>You decide</strong><span>It drafts. You send the email, the post, the page.</span></div>
-          </div>
-          <div class="arm">
-            <div class="stem"></div>
-            <div class="box"><strong>Their own mind</strong><span>Not your login. Not your files. Not your memory.</span></div>
-          </div>
-        </div>
-        <div class="split">
-          <article class="side shared">
-            <p class="tag">A shared chatbot</p>
-            <p>One login. One memory. The company keeps the talk. Anyone on that account can meet what you said.</p>
-          </article>
-          <div class="versus">not this</div>
-          <article class="side ours">
-            <p class="tag">This</p>
-            <p>Your memory stays on the computer. Private talk stays. A second person gets a separate mind. The person who keeps the computer on can see if it is up. They cannot read the talk.</p>
-          </article>
+        <div class="cabinet">
+          <svg viewBox="0 0 640 540" role="img" aria-label="The layers behind the assistant">
+            <rect x="8" y="8" width="624" height="524" rx="28" fill="#fffcf8" stroke="#e4dcd0"/>
+            <rect x="8" y="8" width="10" height="524" rx="5" fill="#1e4d3a"/>
+            <g>
+              <rect x="36" y="28" width="568" height="88" rx="16" fill="#e7f0eb"/>
+              <circle cx="78" cy="72" r="16" fill="#1e4d3a"/>
+              <path d="M70 68 h16 M70 76 h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              <text x="108" y="64" fill="#1c1916" font-family="Georgia, Palatino, serif" font-size="22">Your assistant</text>
+              <text x="108" y="90" fill="#5e574e" font-family="Segoe UI, system-ui, sans-serif" font-size="15">You talk. It drafts. You send.</text>
+            </g>
+            <g>
+              <rect x="36" y="128" width="568" height="88" rx="16" fill="#f4f1eb"/>
+              <rect x="58" y="152" width="28" height="36" rx="3" fill="#1e4d3a"/>
+              <rect x="90" y="158" width="28" height="30" rx="3" fill="#8a8176"/>
+              <rect x="122" y="150" width="28" height="38" rx="3" fill="#1c1916"/>
+              <text x="168" y="164" fill="#1c1916" font-family="Georgia, Palatino, serif" font-size="22">Your files</text>
+              <text x="168" y="190" fill="#5e574e" font-family="Segoe UI, system-ui, sans-serif" font-size="15">Tasks, projects, and the work you want help with.</text>
+            </g>
+            <g>
+              <rect x="36" y="228" width="568" height="88" rx="16" fill="#f8ece7"/>
+              <rect x="58" y="256" width="34" height="24" rx="4" fill="none" stroke="#1c1916" stroke-width="2"/>
+              <path d="M58 262 l17 10 17-10" fill="none" stroke="#1c1916" stroke-width="2"/>
+              <rect x="104" y="252" width="28" height="30" rx="3" fill="none" stroke="#1e4d3a" stroke-width="2"/>
+              <circle cx="154" cy="268" r="14" fill="none" stroke="#1c1916" stroke-width="2"/>
+              <circle cx="196" cy="268" r="14" fill="none" stroke="#1e4d3a" stroke-width="2" stroke-dasharray="3 3"/>
+              <text x="224" y="264" fill="#1c1916" font-family="Georgia, Palatino, serif" font-size="22">The tools</text>
+              <text x="224" y="290" fill="#5e574e" font-family="Segoe UI, system-ui, sans-serif" font-size="15">The right one for the job. Room for the next one.</text>
+            </g>
+            <g>
+              <rect x="36" y="328" width="568" height="88" rx="16" fill="#f4f1eb"/>
+              <rect x="58" y="352" width="46" height="30" rx="4" fill="none" stroke="#1c1916" stroke-width="2"/>
+              <rect x="50" y="384" width="62" height="6" rx="3" fill="#1c1916"/>
+              <path d="M128 384 v-22 h28 v22" fill="none" stroke="#1e4d3a" stroke-width="2"/>
+              <path d="M126 364 l16-12 16 12" fill="none" stroke="#1e4d3a" stroke-width="2"/>
+              <text x="176" y="364" fill="#1c1916" font-family="Georgia, Palatino, serif" font-size="22">Where it lives</text>
+              <text x="176" y="390" fill="#5e574e" font-family="Segoe UI, system-ui, sans-serif" font-size="15">On your computer, or hosted for you. You only talk.</text>
+            </g>
+            <g>
+              <rect x="36" y="428" width="568" height="80" rx="16" fill="#e7f0eb"/>
+              <path d="M58 484 l28-28 16 16 36-40" fill="none" stroke="#1e4d3a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="160" y="462" fill="#1c1916" font-family="Georgia, Palatino, serif" font-size="22">It keeps getting better</text>
+              <text x="160" y="488" fill="#5e574e" font-family="Segoe UI, system-ui, sans-serif" font-size="15">We change the tool. Your desk stays.</text>
+            </g>
+          </svg>
         </div>
       </div>
-      <h2 style="margin-top:36px">What this is about</h2>
-      <p class="intro">The line, if you are explaining it. Also the line to keep learning. Do not add a product name to it.</p>
-      <div class="tiles">
-        <article class="tile"><strong>They talk</strong><span>They do not learn a terminal, and they do not inherit this personality.</span></article>
-        <article class="tile"><strong>Their files stay theirs</strong><span>Not this practice's files. Not a folder inside someone else's account.</span></article>
-        <article class="tile"><strong>They decide what leaves</strong><span>Public work can go out. Private talk stays. They do not edit a settings file to say so.</span></article>
-        <article class="tile"><strong>Up is visible. The talk is not.</strong><span>Someone can keep the computer on and see whether it is up. They cannot read the conversation.</span></article>
-      </div>
-      <p class="intro" style="margin-top:16px">That is the market line. It is not a coach, a sealed vault, a separate computer, or a promise that a cloud company keeps nothing. Those limits are still on this page.</p>
+      <p class="quiet-line">Secure, in plain words: your files have their own place, private talk stays, and the person who keeps it running can see that it is up. They cannot read what you said. That is a rule we keep. It is not a locked room.</p>
     </section>
     <section id="have">
       <h2>What we have, and why</h2>
