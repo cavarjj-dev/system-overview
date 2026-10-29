@@ -1,6 +1,6 @@
 # Operator system
 
-Public map of one practice operator system. A template for a bespoke build. Not a client portal.
+Public brief of one practice assistant: what it is, why it is built this way, and what someone else would get. Not a control panel. Not a client portal.
 
 The page is a snapshot. It is refreshed from the operator machine and published on purpose. A timer does not publish it.
 
