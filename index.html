@@ -98,8 +98,67 @@
   .limit strong { display: block; margin-bottom: 4px; }
   .limit p { margin: 0; color: var(--muted); }
   footer { padding: 36px 0 64px; color: var(--faint); font-size: 14px; }
+  .claim {
+    margin: 0 0 18px;
+    font-family: Georgia, Palatino, serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .picture {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 28px 22px 22px;
+  }
+  .hub { display: flex; flex-direction: column; align-items: center; }
+  .box {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px;
+    text-align: center;
+    width: min(280px, 100%);
+  }
+  .box strong { display: block; margin-bottom: 4px; }
+  .box span, .arm span { color: var(--muted); font-size: 15px; }
+  .stem { width: 2px; height: 28px; background: var(--green); }
+  .arms {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 0;
+  }
+  .arm { display: flex; flex-direction: column; align-items: center; }
+  .arm .stem { height: 22px; }
+  .bar {
+    width: min(640px, 72%);
+    height: 2px;
+    background: var(--green);
+  }
+  .split { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: stretch; margin-top: 22px; }
+  .side {
+    border-radius: 16px;
+    padding: 16px 16px 8px;
+  }
+  .side.shared { background: var(--clay-soft); }
+  .side.ours { background: var(--green-soft); }
+  .side p { margin: 0 0 8px; }
+  .tag { font-size: 13px; font-weight: 650; letter-spacing: 0.02em; text-transform: uppercase; }
+  .versus {
+    align-self: center;
+    color: var(--faint);
+    font-size: 13px;
+    font-weight: 650;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
   @media (max-width: 800px) {
-    .tiles, .grid, .grid.three { grid-template-columns: 1fr; }
+    .tiles, .grid, .grid.three, .arms, .split { grid-template-columns: 1fr; }
+    .versus { writing-mode: horizontal-tb; transform: none; text-align: center; }
+    .bar { display: none; }
     .facts div { grid-template-columns: 1fr; gap: 4px; }
   }
 </style>
@@ -117,6 +176,7 @@
 </header>
 <nav>
   <ul>
+    <li><a href="#picture">How it works</a></li>
     <li><a href="#have">What we have</a></li>
     <li><a href="#can">Can and cannot</a></li>
     <li><a href="#setup">Setup</a></li>
@@ -128,7 +188,7 @@
 <main id="main"></main>
 <footer id="foot"></footer>
 <script>
-const DATA_VERSION = "20261029T1751";
+const DATA_VERSION = "20261029T1809";
 
 function esc(s) {
   return String(s ?? "").replace(/[&<>"']/g, c => ({
@@ -165,6 +225,54 @@ function render(data) {
     `<div class="limit"><strong>${esc(g.title)}</strong><p>${esc(g.detail)}</p></div>`
   ).join("");
   document.getElementById("main").innerHTML = `
+    <section id="picture">
+      <h2>How it works</h2>
+      <p class="claim">A mind that is not shared.</p>
+      <p class="intro">You talk. The assistant sits on a computer. What happens next depends on the kind of work. A second person does not join your mind. They get their own.</p>
+      <div class="picture">
+        <div class="hub">
+          <div class="box"><strong>You talk</strong><span>Where you already talk. You do not learn a terminal.</span></div>
+          <div class="stem"></div>
+          <div class="box"><strong>Your assistant</strong><span>On a computer. Your files. Your memory. Not a shared login.</span></div>
+          <div class="stem"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="arms">
+          <div class="arm">
+            <div class="stem"></div>
+            <div class="box"><strong>Stays here</strong><span>A file you name. Private talk. It does not go out.</span></div>
+          </div>
+          <div class="arm">
+            <div class="stem"></div>
+            <div class="box"><strong>You decide</strong><span>It drafts. You send the email, the post, the page.</span></div>
+          </div>
+          <div class="arm">
+            <div class="stem"></div>
+            <div class="box"><strong>Their own mind</strong><span>Not your login. Not your files. Not your memory.</span></div>
+          </div>
+        </div>
+        <div class="split">
+          <article class="side shared">
+            <p class="tag">A shared chatbot</p>
+            <p>One login. One memory. The company keeps the talk. Anyone on that account can meet what you said.</p>
+          </article>
+          <div class="versus">not this</div>
+          <article class="side ours">
+            <p class="tag">This</p>
+            <p>Your memory stays on the computer. Private talk stays. A second person gets a separate mind. The person who keeps the computer on can see if it is up. They cannot read the talk.</p>
+          </article>
+        </div>
+      </div>
+      <h2 style="margin-top:36px">What this is about</h2>
+      <p class="intro">The line, if you are explaining it. Also the line to keep learning. Do not add a product name to it.</p>
+      <div class="tiles">
+        <article class="tile"><strong>They talk</strong><span>They do not learn a terminal, and they do not inherit this personality.</span></article>
+        <article class="tile"><strong>Their files stay theirs</strong><span>Not this practice's files. Not a folder inside someone else's account.</span></article>
+        <article class="tile"><strong>They decide what leaves</strong><span>Public work can go out. Private talk stays. They do not edit a settings file to say so.</span></article>
+        <article class="tile"><strong>Up is visible. The talk is not.</strong><span>Someone can keep the computer on and see whether it is up. They cannot read the conversation.</span></article>
+      </div>
+      <p class="intro" style="margin-top:16px">That is the market line. It is not a coach, a sealed vault, a separate computer, or a promise that a cloud company keeps nothing. Those limits are still on this page.</p>
+    </section>
     <section id="have">
       <h2>What we have, and why</h2>
       <p class="intro">${esc(data.have_intro)}</p>
